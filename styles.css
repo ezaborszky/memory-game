@@ -49,7 +49,7 @@ body {
     height: 10rem;
     width: 10rem;
     background-color: rgb(175, 209, 197);
-    transition-duration: 200ms;
+    /* transition-duration: 100ms; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,13 +62,13 @@ body {
 .revealed {
     color: rgba(0, 0, 0, .7);
     background-color: rgb(233, 155, 38);
-    transition-duration: 400ms;
+    transition-duration: 100ms;
 }
 
 .solved {
     color: rgba(0, 0, 0, .7);
     background-color: rgba(89, 241, 0, 0.637);
-    transition-duration: 400ms;
+    transition-duration: 300ms;
 }
 
 .card:hover {
@@ -113,5 +113,5 @@ body {
 }
 
 #reset:hover {
-    background-color: rgb(166, 206, 206); ;
+    background-color: rgba(166, 206, 206, 0.705); ;
 }

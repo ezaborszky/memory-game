@@ -6,16 +6,6 @@ let memory;
 let node;
 let idMemory;
 
-resetButton.addEventListener('click', () => {
-    cards.forEach(card => {
-        card.classList.remove('solved')
-        card.classList.remove('revealed')
-        temp = 0;
-        memory = undefined;
-        node = undefined;
-        idMemory = undefined;
-    })
-})
 
 function shuffle() {
     const shuffledList = []
@@ -33,10 +23,14 @@ function shuffle() {
 
 }
 
-const shuffledList = shuffle();
+
+
+let shuffledList = shuffle();
 
 console.log(shuffledList);
 
+
+function assing(shuffledList) {
 [...cards].forEach(card => {
 
     switch(shuffledList[0   ]){
@@ -60,8 +54,9 @@ console.log(shuffledList);
             break;    
         }
     shuffledList.shift();
-})
+})}
 
+assing(shuffledList);
 
 cards.forEach(card => {
     card.addEventListener('click', (e) => {
@@ -93,4 +88,18 @@ cards.forEach(card => {
 
 })
 
-console.log(cards)
+resetButton.addEventListener('click', () => {
+    cards.forEach(card => {
+        card.classList.remove('solved')
+        card.classList.remove('revealed')
+        card.classList.remove(card.classList[1]) 
+        
+    })
+    temp = 0;
+    memory = undefined;
+    node = undefined;
+    idMemory = undefined;
+    let shuffledList = shuffle();
+    assing(shuffledList);
+    console.log(shuffledList);
+})
