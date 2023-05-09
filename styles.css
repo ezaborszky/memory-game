@@ -1,0 +1,117 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.wrapper {
+    border: 0px;
+    padding: 0px;
+    height: 100vh;
+    width: 100vw;
+    border-radius: 1px black solid;
+    background: linear-gradient(45deg, rgba(10,100,200,0.5), rgba(120,40,40,0.5));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.area {
+    width: 70vw;
+    height: 80vh;
+    border: blueviolet 1px dotted;
+    display: grid;
+    grid-template-rows: 2fr 7fr;
+}
+
+.header {
+    border-bottom: blueviolet 1px dotted;
+}
+
+.game {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem
+}
+
+.cards {
+    border: burlywood 1px dotted;
+    display: grid;
+    grid-template-columns: repeat(4, 4fr);
+    gap: 2px;
+}
+
+.card {
+    height: 10rem;
+    width: 10rem;
+    background-color: rgb(175, 209, 197);
+    transition-duration: 200ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6rem;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0);
+    
+}
+
+.revealed {
+    color: rgba(0, 0, 0, .7);
+    background-color: rgb(233, 155, 38);
+    transition-duration: 400ms;
+}
+
+.solved {
+    color: rgba(0, 0, 0, .7);
+    background-color: rgba(89, 241, 0, 0.637);
+    transition-duration: 400ms;
+}
+
+.card:hover {
+    opacity: 0.6;
+}
+
+.one.card::after{
+    content: "@";
+    
+}
+
+.two.card::after{
+    content: "#";
+}
+
+.three.card::after{
+    content: "$";
+}
+
+.four.card::after{
+    content: "&";
+}
+
+.five.card::after{
+    content: "Đ";
+}
+
+.six.card::after{
+    content: "*";
+}   
+
+#reset {
+    margin: 1rem;
+    width: 15rem;
+    height: 8rem;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(85, 177, 177);
+    font-size: 40px;
+    font-style: italic;
+    cursor: pointer;
+}
+
+#reset:hover {
+    background-color: rgb(166, 206, 206); ;
+}
